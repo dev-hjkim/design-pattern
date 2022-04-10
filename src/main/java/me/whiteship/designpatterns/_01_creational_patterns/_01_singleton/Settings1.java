@@ -11,7 +11,7 @@ public class Settings1 {
 
     public static Settings1 getInstance() {
         if (INSTANCE == null) {
-            instance = new Settings1();
+            INSTANCE = new Settings1();
         }
 
         return INSTANCE;
