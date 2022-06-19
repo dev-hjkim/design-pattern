@@ -5,16 +5,16 @@ package me.whiteship.designpatterns._01_creational_patterns._01_singleton;
  */
 public class Settings1 {
 
-    private static Settings1 INSTANCE;
+    private static Settings1 instance;
 
     private Settings1() { }
 
     public static Settings1 getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new Settings1();
+        if (instance == null) {
+            instance = new Settings1();
         }
 
-        return INSTANCE;
+        return instance;
     }
 
 }
