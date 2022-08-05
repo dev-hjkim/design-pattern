@@ -4,10 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public abstract class FileProcessor {
+public abstract class TemplateCallbackFileProcessor {
 
     private String path;
-    public FileProcessor(String path) {
+    public TemplateCallbackFileProcessor(String path) {
         this.path = path;
     }
 
