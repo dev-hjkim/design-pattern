@@ -1,6 +1,6 @@
 package me.whiteship.designpatterns._01_creational_patterns._02_factory_method._04_practice;
 
-public class CheesePizza implements Pizza {
+public class NYStylePepperoniPizza implements Pizza {
     @Override
     public void prepare() {
 
