@@ -13,7 +13,7 @@ public abstract class Pizza {
         System.out.println("준비 중: " + name);
         System.out.println("도우를 돌리는 중...");
         System.out.println("소스를 뿌리는 중...");
-        System.out.println("토핑을 올리는 중...");
+        System.out.println("토핑을 올리는 중:");
         for (String topping : toppings) {
             System.out.println(" " + topping);
         }
