@@ -67,5 +67,25 @@ public class RemoteLoader {
         remoteControlWithUndo2.onButtonWasPushed(1);
         System.out.println(remoteControlWithUndo2);
         remoteControlWithUndo2.undoButtonWasPushed();
+
+
+        System.out.println("\n===========================================================================\n");
+        // --------------------------------------------------------------------------------
+        RemoteControlWithUndo remoteControlWithUndo3 = new RemoteControlWithUndo();
+
+        Command[] partyOn = { livingRoomLightOn, stereoOnWithCD };
+        Command[] partyOff = { livingRoomLightOff, stereoOff };
+
+        MacroCommand partyOnMacro = new MacroCommand(partyOn);
+        MacroCommand partyOffMacro = new MacroCommand(partyOff);
+
+        remoteControlWithUndo3.setCommand(0, partyOnMacro, partyOffMacro);
+
+        System.out.println(remoteControlWithUndo3);
+        System.out.println("--- 매크로 ON ---");
+        remoteControlWithUndo3.onButtonWasPushed(0);
+        System.out.println("--- 매크로 OFF ---");
+        remoteControlWithUndo3.offButtonWasPushed(0);
+
     }
 }
