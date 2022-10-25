@@ -1,8 +1,9 @@
 package me.whiteship.designpatterns._03_behavioral_patterns._16_iterator._04_practice;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
     ArrayList<MenuItem> menuItems;
 
     public PancakeHouseMenu() {
@@ -35,7 +36,7 @@ public class PancakeHouseMenu {
         this.menuItems.add(menuItem);
     }
 
-    public Iterator createIterator() {
-        return new PancakeHouseMenuIterator(this.menuItems);
+    public Iterator<MenuItem> createIterator() {
+        return this.menuItems.iterator();
     }
 }

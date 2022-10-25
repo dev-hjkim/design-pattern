@@ -1,6 +1,9 @@
 package me.whiteship.designpatterns._03_behavioral_patterns._16_iterator._04_practice;
 
-public class DinerMenu {
+import java.util.Arrays;
+import java.util.Iterator;
+
+public class DinerMenu implements Menu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
@@ -39,7 +42,7 @@ public class DinerMenu {
         }
     }
 
-    public Iterator createIterator() {
-        return new DinerMenuIterator(this.menuItems);
+    public Iterator<MenuItem> createIterator() {
+        return Arrays.stream(this.menuItems).iterator();
     }
 }
