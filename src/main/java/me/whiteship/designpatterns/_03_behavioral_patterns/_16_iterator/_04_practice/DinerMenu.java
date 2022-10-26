@@ -43,6 +43,6 @@ public class DinerMenu implements Menu {
     }
 
     public Iterator<MenuItem> createIterator() {
-        return Arrays.stream(this.menuItems).iterator();
+        return new DinerMenuIterator(this.menuItems);
     }
 }
