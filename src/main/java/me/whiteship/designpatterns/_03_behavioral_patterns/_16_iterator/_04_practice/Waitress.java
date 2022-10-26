@@ -13,6 +13,7 @@ public class Waitress {
     public void printMenu() {
         for (Menu menu : this.menus) {
             printMenu(menu.createIterator());
+            System.out.println("----------");
         }
     }
 
