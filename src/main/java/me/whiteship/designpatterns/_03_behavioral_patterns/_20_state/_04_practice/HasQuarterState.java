@@ -1,6 +1,9 @@
 package me.whiteship.designpatterns._03_behavioral_patterns._20_state._04_practice;
 
+import java.util.Random;
+
 public class HasQuarterState implements State {
+    Random randomWinner = new Random(System.currentTimeMillis());
     GumballMachine gumballMachine;
 
     public HasQuarterState(GumballMachine gumballMachine) {
@@ -18,7 +21,12 @@ public class HasQuarterState implements State {
 
     public void turnCrank() {
         System.out.println("손잡이를 돌리셨습니다.");
-        gumballMachine.setState(gumballMachine.getSoldState());
+        int winner = randomWinner.nextInt(10);
+        if ((winner == 0) && (this.gumballMachine.getCount() > 1)) {
+            this.gumballMachine.setState(this.gumballMachine.getWinnerState());
+        } else {
+            gumballMachine.setState(gumballMachine.getSoldState());
+        }
     }
 
     public void dispense() {
